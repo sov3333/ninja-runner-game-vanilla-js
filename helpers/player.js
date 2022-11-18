@@ -3,8 +3,8 @@ import { Sitting, Running, Jumping, Falling } from './playerStates.js'
 export class Player {
     constructor(game){
         this.game = game;
-        this.width = 1322/21; // single frame width
-        this.height = 100; // single frame height
+        this.width = 727/10; // single frame width
+        this.height = 125; // single frame height
         this.x = 50;
         this.y = this.game.height - this.height;
         this.vy = 0;
@@ -13,14 +13,14 @@ export class Player {
         this.image = player; // this.image = document.getElementById('player'); 
         this.frameX = 0;
         this.frameY = 0;
-        this.maxFrame = 20;
+        this.maxFrame = 9;
         this.fps = 60;
         this.frameInterval = 1000/this.fps;
         this.frameTimer = 0;
         this.speed = 0;
         this.maxSpeed = 10;
         this.states = [new Sitting(this), new Running(this), new Jumping(this), new Falling(this)];
-        this.currentState = this.states[1];
+        this.currentState = this.states[0];
         this.currentState.enter();
     }
     update(input, deltaTime){
