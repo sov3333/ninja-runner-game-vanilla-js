@@ -3,8 +3,8 @@ import { Sitting, Running, Jumping, Falling } from './playerStates.js'
 export class Player {
     constructor(game){
         this.game = game;
-        this.width = 2247/21; // single frame width
-        this.height = 170; // single frame height
+        this.width = 1322/21; // single frame width
+        this.height = 100; // single frame height
         this.x = 50;
         this.y = this.game.height - this.height;
         this.vy = 0;
